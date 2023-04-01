@@ -1,0 +1,29 @@
+{
+  "name": "fm-age-calculator-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . --ext .ts,.tsx"
+  },
+  "dependencies": {
+    "@total-typescript/ts-reset": "0.4.2",
+    "@types/node": "18.15.11",
+    "@types/react": "18.0.31",
+    "@types/react-dom": "18.0.11",
+    "@typescript-eslint/eslint-plugin": "5.57.0",
+    "@typescript-eslint/parser": "5.57.0",
+    "eslint": "8.37.0",
+    "eslint-config-airbnb-typescript": "17.0.0",
+    "eslint-config-next": "13.2.4",
+    "eslint-config-prettier": "8.8.0",
+    "eslint-plugin-import": "2.27.5",
+    "next": "13.2.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sass": "1.60.0",
+    "typescript": "5.0.3"
+  }
+}
