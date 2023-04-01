@@ -6,6 +6,7 @@
     "plugin:@typescript-eslint/strict",
     "prettier"
   ],
+  "exludeFiles": ["**/*.js"],
   "plugins": ["@typescript-eslint"],
   "rules": {
     "react/no-unescaped-entities": "off",
