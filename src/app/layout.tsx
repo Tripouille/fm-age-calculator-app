@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Title",
-  description: "Description",
+  title: "Age Calculator App",
+  description: "Frontend Mentor Challenge",
 };
 
 export default function RootLayout({
