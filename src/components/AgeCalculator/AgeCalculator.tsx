@@ -1,6 +1,6 @@
 "use client";
 
-import { BirthdayDate } from "@/utils/BirthdayDate";
+import { BirthdayDate } from "@/utils/birthdayDate";
 import { calculateAge } from "@/utils/calculateAge";
 import { useState } from "react";
 import styles from "./AgeCalculator.module.scss";

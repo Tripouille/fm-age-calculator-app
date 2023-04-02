@@ -5,7 +5,7 @@ import {
   differenceInYears,
   parse,
 } from "date-fns";
-import { BirthdayDate } from "./BirthdayDate";
+import { BirthdayDate } from "./birthdayDate";
 
 export function calculateAge(
   birthdayDate: BirthdayDate,

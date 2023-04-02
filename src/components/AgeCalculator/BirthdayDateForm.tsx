@@ -1,6 +1,6 @@
 "use client";
 
-import { BirthdayDate, BirthdayDateSchema } from "@/utils/BirthdayDate";
+import { BirthdayDate, birthdayDateSchema } from "@/utils/birthdayDate";
 import { useForm } from "react-hook-form";
 import styles from "./AgeCalculator.module.scss";
 import { BirthdayDateInput } from "./BirthdayDateInput";
@@ -15,7 +15,7 @@ export interface BirthdayDateFormProps {
 export const BirthdayDateForm = ({ onSubmit }: BirthdayDateFormProps) => {
   const { register, formState, trigger, handleSubmit, getValues } =
     useForm<BirthdayDate>({
-      resolver: zodResolver(BirthdayDateSchema),
+      resolver: zodResolver(birthdayDateSchema),
       mode: "onBlur",
     });
 

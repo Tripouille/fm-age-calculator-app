@@ -3,7 +3,7 @@ import { isFutureDate } from "./isFutureDate";
 import { isNumberRegex } from "./isNumberRegex";
 import { isValidDate } from "./isValidDate";
 
-export const BirthdayDateSchema = z
+export const birthdayDateSchema = z
   .object({
     day: z.string().refine((val) => {
       if (!isNumberRegex.test(val)) return false;
@@ -63,4 +63,4 @@ export const BirthdayDateSchema = z
     }
   });
 
-export type BirthdayDate = z.infer<typeof BirthdayDateSchema>;
+export type BirthdayDate = z.infer<typeof birthdayDateSchema>;
