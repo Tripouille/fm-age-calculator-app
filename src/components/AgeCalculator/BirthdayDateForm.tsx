@@ -6,23 +6,29 @@ import styles from "./AgeCalculator.module.scss";
 import { BirthdayDateInput } from "./BirthdayDateInput";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { BIRTHDAY_DATE_FORM_IDS } from "./constant";
+import { isEmptyString } from "@/utils/isEmptyString";
 
 export interface BirthdayDateFormProps {
   onSubmit: (date: BirthdayDate) => void;
 }
 
 export const BirthdayDateForm = ({ onSubmit }: BirthdayDateFormProps) => {
-  const { register, formState, trigger, handleSubmit } = useForm<BirthdayDate>({
-    resolver: zodResolver(BirthdayDateSchema),
-    mode: "onBlur",
-  });
+  const { register, formState, trigger, handleSubmit, getValues } =
+    useForm<BirthdayDate>({
+      resolver: zodResolver(BirthdayDateSchema),
+      mode: "onBlur",
+    });
 
-  function revalidateAllFields() {
-    trigger(["day", "month", "year"]);
+  function revalidateNonEmptyFields() {
+    const fields = getValues();
+    const nonEmptyFieldKeys = Object.keys(fields).filter(
+      (fieldKey) => !isEmptyString(fields[fieldKey as keyof typeof fields])
+    ) as (keyof typeof fields)[];
+    trigger(nonEmptyFieldKeys);
   }
 
   const registerOptions = {
-    onBlur: revalidateAllFields,
+    onBlur: revalidateNonEmptyFields,
   };
 
   return (
