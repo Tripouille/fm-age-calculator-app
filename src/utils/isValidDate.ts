@@ -1,11 +1,13 @@
 import { isValid, parse } from "date-fns";
 
 export function isValidDate(
-  day: string,
-  month: string,
-  year: string,
+  date: { day: string; month: string; year: string },
   referenceDate: Date = new Date()
 ) {
-  const parsed = parse(`${day}/${month}/${year}`, "dd/MM/yyyy", referenceDate);
+  const parsed = parse(
+    `${date.day}/${date.month}/${date.year}`,
+    "dd/MM/yyyy",
+    referenceDate
+  );
   return isValid(parsed);
 }

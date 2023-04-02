@@ -31,8 +31,8 @@ export const BirthdayDateSchema = z
   .superRefine(({ day, month, year }, ctx) => {
     /* Skip validation if a value is missing */
     if (![day, month, year].every(Boolean)) return;
-    const dateIsValid = isValidDate(day, month, year);
-    const dateIsFuture = isFutureDate(day, month, year);
+    const dateIsValid = isValidDate({ day, month, year });
+    const dateIsFuture = isFutureDate({ day, month, year });
 
     if (dateIsFuture) {
       ctx.addIssue({
