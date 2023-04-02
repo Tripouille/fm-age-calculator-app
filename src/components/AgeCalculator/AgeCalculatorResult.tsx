@@ -33,7 +33,6 @@ export const AgeCalculatorResult = ({
 };
 
 function AgeCalculatorResultValue({ value }: { value: string }) {
-  console.log(value, isEmptyString(value));
   if (isEmptyString(value)) return <span>- -</span>;
 
   return <span>{value}</span>;
