@@ -7,18 +7,21 @@ import { isValidDate } from "./isValidDate";
 export const BirthdayDateSchema = z
   .object({
     day: z.string().refine((val) => {
+      /* Skip validation if val is empty */
       if (isEmptyString(val)) return true;
       if (!isNumberRegex.test(val)) return false;
       const day = parseInt(val);
       return day >= 1 && day <= 31;
     }, "Must be a valid day"),
     month: z.string().refine((val) => {
+      /* Skip validation if val is empty */
       if (isEmptyString(val)) return true;
       if (!isNumberRegex.test(val)) return false;
       const month = parseInt(val);
       return month >= 1 && month <= 12;
     }, "Must be a valid month"),
     year: z.string().refine((val) => {
+      /* Skip validation if val is empty */
       if (isEmptyString(val)) return true;
       if (!isNumberRegex.test(val)) return false;
       const year = parseInt(val);
@@ -26,7 +29,7 @@ export const BirthdayDateSchema = z
     }, "Must be a valid year"),
   })
   .superRefine(({ day, month, year }, ctx) => {
-    /* Skip validation a value is missing */
+    /* Skip validation if a value is missing */
     if (![day, month, year].every(Boolean)) return;
     const dateIsValid = isValidDate(day, month, year);
     const dateIsFuture = isFutureDate(day, month, year);
