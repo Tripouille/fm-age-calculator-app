@@ -1,6 +1,6 @@
 "use client";
 
-import { BirthdayDate, birthdayDateSchema } from "@/utils/birthdayDate";
+import { BirthdayDate, birthdayDateSchema } from "@/utils/birthdayDateSchema";
 import { useForm } from "react-hook-form";
 import styles from "./AgeCalculator.module.scss";
 import { BirthdayDateInput } from "./BirthdayDateInput";
