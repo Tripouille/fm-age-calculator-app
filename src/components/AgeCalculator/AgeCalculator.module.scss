@@ -81,19 +81,29 @@
       grid-column: 1;
     }
 
-    svg {
+    button {
       background: var(--clr-primary-100);
       padding: 1em;
       border-radius: 50%;
-      height: 20px;
-      width: 20px;
-
       grid-row: 1;
       grid-column: 1;
+      cursor: pointer;
+      border: none;
+      display: grid;
+      place-items: center;
 
-      @media (min-width: $device-sm) {
-        height: auto;
-        width: auto;
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      svg {
+        width: 30px;
+        height: 30px;
+
+        @media (min-width: $device-sm) {
+          width: 50px;
+          height: 50px;
+        }
       }
     }
   }

@@ -1,10 +1,11 @@
+import { isEmptyString } from "@/utils/isEmptyString";
 import styles from "./AgeCalculator.module.scss";
 import { BIRTHDAY_DATE_FORM_IDS } from "./constant";
 
 export interface AgeCalculatorResultProps {
-  years: number;
-  months: number;
-  days: number;
+  years: string;
+  months: string;
+  days: string;
 }
 
 export const AgeCalculatorResult = ({
@@ -31,8 +32,9 @@ export const AgeCalculatorResult = ({
   );
 };
 
-function AgeCalculatorResultValue({ value }: { value: number }) {
-  if (!value) return <span>- -</span>;
+function AgeCalculatorResultValue({ value }: { value: string }) {
+  console.log(value, isEmptyString(value));
+  if (isEmptyString(value)) return <span>- -</span>;
 
   return <span>{value}</span>;
 }

@@ -7,8 +7,12 @@ import { BirthdayDateInput } from "./BirthdayDateInput";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { BIRTHDAY_DATE_FORM_IDS } from "./constant";
 
-export const BirthdayDateForm = () => {
-  const { register, formState, trigger } = useForm<BirthdayDate>({
+export interface BirthdayDateFormProps {
+  onSubmit: (date: BirthdayDate) => void;
+}
+
+export const BirthdayDateForm = ({ onSubmit }: BirthdayDateFormProps) => {
+  const { register, formState, trigger, handleSubmit } = useForm<BirthdayDate>({
     resolver: zodResolver(BirthdayDateSchema),
     mode: "onBlur",
   });
@@ -25,6 +29,7 @@ export const BirthdayDateForm = () => {
     <form
       id={BIRTHDAY_DATE_FORM_IDS.form}
       className={styles["age_calculator__birthday-date-form"]}
+      onSubmit={handleSubmit(onSubmit)}
     >
       <BirthdayDateInput
         id={BIRTHDAY_DATE_FORM_IDS.day}
