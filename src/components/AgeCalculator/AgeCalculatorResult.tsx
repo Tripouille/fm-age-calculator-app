@@ -1,5 +1,5 @@
 import styles from "./AgeCalculator.module.scss";
-import { BIRTHDAY_DATE_SELECTOR_IDS } from "./constant";
+import { BIRTHDAY_DATE_FORM_IDS } from "./constant";
 
 export interface AgeCalculatorResultProps {
   years: number;
@@ -12,7 +12,7 @@ export const AgeCalculatorResult = ({
   months,
   days,
 }: AgeCalculatorResultProps) => {
-  const { day, month, year, form } = BIRTHDAY_DATE_SELECTOR_IDS;
+  const { day, month, year, form } = BIRTHDAY_DATE_FORM_IDS;
   const htmlFor = `${day} ${month} ${year}`;
 
   return (

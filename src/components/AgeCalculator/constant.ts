@@ -1,4 +1,4 @@
-export const BIRTHDAY_DATE_SELECTOR_IDS = {
+export const BIRTHDAY_DATE_FORM_IDS = {
   form: "birthday_date_form",
   day: "day",
   month: "month",
