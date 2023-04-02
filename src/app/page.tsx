@@ -1,6 +1,6 @@
-import { HelloWorld } from "@/components/HelloWorld";
+import { AgeCalculator } from "@/components/AgeCalculator/AgeCalculator";
 import "./global.scss";
 
 export default function Home() {
-  return <HelloWorld />;
+  return <AgeCalculator />;
 }

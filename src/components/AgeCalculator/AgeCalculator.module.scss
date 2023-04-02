@@ -1,0 +1,81 @@
+.age_calculator {
+  display: flex;
+  flex-flow: column;
+  row-gap: 1em;
+
+  max-width: 40em;
+  padding: 4em;
+  background-color: var(--clr-neutral-100);
+
+  border-radius: 1em 1em 10em 1em;
+
+  &__birthday-date-form {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    column-gap: 1.5em;
+    width: 70%;
+
+    &__input {
+      display: flex;
+      flex-flow: column;
+      row-gap: 5px;
+
+      font-size: normal;
+      font-weight: bold;
+      color: var(--clr-neutral-800);
+
+      input {
+        padding: 0.5em;
+        border: 1px solid var(--clr-neutral-300);
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: var(--fs-input);
+      }
+    }
+  }
+
+  &__spacer {
+    position: relative;
+    display: grid;
+    align-items: center;
+    justify-items: flex-end;
+
+    hr {
+      background-color: var(--clr-neutral-200);
+      height: 2px;
+      width: 100%;
+      border-style: none;
+
+      grid-row: 1;
+      grid-column: 1;
+    }
+
+    svg {
+      background: var(--clr-primary-100);
+      padding: 1em;
+      border-radius: 50%;
+
+      grid-row: 1;
+      grid-column: 1;
+    }
+  }
+
+  &__result {
+    font-size: 6em;
+    line-height: 1em;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 0.2em;
+
+    span {
+      color: var(--clr-primary-100);
+      text-align: center;
+    }
+
+    span:nth-of-type(2n) {
+      text-align: left;
+      color: var(--clr-neutral-900);
+    }
+  }
+}
