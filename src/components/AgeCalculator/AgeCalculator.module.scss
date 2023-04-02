@@ -4,7 +4,7 @@
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-  row-gap: 1em;
+  row-gap: 0.5em;
   max-width: 18em;
   padding: 2em;
   background-color: var(--clr-neutral-100);
@@ -33,6 +33,10 @@
       font-weight: bold;
       color: var(--clr-neutral-800);
 
+      &[aria-invalid="true"] {
+        color: var(--clr-error-100);
+      }
+
       @media (min-width: $device-sm) {
         font-size: var(--fs-300);
       }
@@ -44,10 +48,15 @@
         font-weight: bold;
         font-size: var(--fs-300);
         width: 100%;
+        color: var(--clr-neutral-900);
 
         @media (min-width: $device-sm) {
           font-size: var(--fs-500);
         }
+      }
+
+      span {
+        font-size: x-small;
       }
     }
   }

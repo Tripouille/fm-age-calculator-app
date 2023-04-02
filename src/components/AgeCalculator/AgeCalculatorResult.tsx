@@ -1,5 +1,5 @@
 import styles from "./AgeCalculator.module.scss";
-import { BIRTHDAY_DATE_SELECTOR_IDS } from "./BirthdayDateForm";
+import { BIRTHDAY_DATE_SELECTOR_IDS } from "./constant";
 
 export interface AgeCalculatorResultProps {
   years: number;
