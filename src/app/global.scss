@@ -7,12 +7,13 @@
   --clr-primary-100: hsl(259, 100%, 65%);
   --clr-error-100: hsl(0, 100%, 67%);
 
-  --fs-300: 1rem;
-  --fs-400: 1.25rem;
-  --fs-500: 2rem;
-  --fs-600: 2.827rem;
-  --fs-700: 4rem;
-  --fs-800: 5.653rem;
+  --fs-200: 1.4rem;
+  --fs-300: 1.6rem;
+  --fs-400: 2rem;
+  --fs-500: 3.2rem;
+  --fs-600: 4.5rem;
+  --fs-700: 6.4rem;
+  --fs-800: 9rem;
 
   background-color: var(--clr-neutral-200);
   min-height: 100vh;
@@ -26,4 +27,14 @@
   * {
     margin: 0;
   }
+
+  
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
 }
