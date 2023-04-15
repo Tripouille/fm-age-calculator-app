@@ -1,7 +1,7 @@
 :root {
   --clr-neutral-100: hsl(0, 0%, 100%);
   --clr-neutral-200: hsl(0, 0%, 94%);
-  --clr-neutral-300: hsl(0, 0%, 86%);
+  --clr-neutral-300: #dcdcdc;
   --clr-neutral-800: hsl(0, 1%, 44%);
   --clr-neutral-900: hsl(0, 0%, 8%);
   --clr-primary-100: hsl(259, 100%, 65%);
@@ -18,21 +18,22 @@
 
 html {
   font-size: 62.5%;
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 body {
-  font-size: 1.6rem;
-  background-color: var(--clr-neutral-200);
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   *:not(svg) {
     box-sizing: border-box;
   }
 
-  * {
-    margin: 0;
-  }
+  min-height: 100vh;
+  font-size: 1.6rem;
+  background-color: var(--clr-neutral-200);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
