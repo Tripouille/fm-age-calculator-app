@@ -5,13 +5,13 @@
   flex-flow: column;
   justify-content: space-between;
   background-color: var(--clr-neutral-100);
-  height: 48.6rem;
+  min-height: 48.6rem;
   width: 34.3rem;
   padding: 4.8rem 2.4rem;
   border-radius: 24px 24px 100px 24px;
 
   @media (min-width: $device-sm) {
-    height: 68rem;
+    min-height: 65.1rem;
     width: 84rem;
     padding: 5.6rem;
     border-radius: 24px 24px 200px 24px;
@@ -20,7 +20,7 @@
   &__birthday-date-form {
     display: flex;
     column-gap: 1.6rem;
-    min-height: 15rem;
+    min-height: 10.1rem;
 
     @media (min-width: $device-sm) {
       column-gap: 3.2rem;
@@ -29,7 +29,6 @@
     &__input {
       display: flex;
       flex-flow: column;
-      row-gap: 0.8rem;
       width: 16rem;
 
       font-size: var(--fs-200);
@@ -72,11 +71,6 @@
     align-items: center;
     width: 100%;
     display: flex;
-    min-height: 6.4rem;
-
-    @media (min-width: $device-sm) {
-      min-height: 9.6rem;
-    }
 
     span {
       background: var(--clr-neutral-200);
@@ -93,12 +87,17 @@
       border: none;
       display: grid;
       place-items: center;
-      height: 100%;
-      aspect-ratio: 1;
+      height: 6.4rem;
+      width: 6.4rem;
 
       &:hover {
         transform: scale(1.1);
         transition: transform 0.1s ease-out;
+      }
+
+      @media (min-width: $device-sm) {
+        height: 9.6rem;
+        width: 9.6rem;
       }
 
       svg {
@@ -118,8 +117,9 @@
     display: grid;
     grid-template-columns: auto 1fr;
     column-gap: 0.8rem;
-    line-height: 1em;
+    line-height: 110%;
     font-size: 4.2rem;
+    font-style: italic;
     font-weight: 800;
 
     @media (min-width: $device-sm) {
